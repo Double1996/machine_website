@@ -1,9 +1,9 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_area :content, placeholder: "撰写新的文章" %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= f.submit "发布", class: "btn btn-primary" %>
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
@@ -13,7 +13,7 @@
   $('#micropost_picture').bind('change', function() {
     var size_in_megabytes = this.files[0].size/1024/1024;
     if (size_in_megabytes > 5) {
-      alert('Maximum file size is 5MB. Please choose a smaller file.');
+      alert('最大上传文件是5M, 请选择小于5M的文件上传');
     }
   });
 </script>
