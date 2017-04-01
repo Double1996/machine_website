@@ -1,0 +1,10 @@
+<% provide (:title), "题库" %>
+<h1>题库列表</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @queestions %>
+</ul>
+
+<%= will_paginate %>
