@@ -1,0 +1,31 @@
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 4px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  padding-top: 5px;
+  padding-left: 30px;
+
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.nav-right{
+  float: right;
+}
