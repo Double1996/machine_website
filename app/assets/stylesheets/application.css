@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+@import "layout/_footer.scss";
+@import "layout/_style.scss";
+@import "layout/_style.scss";
