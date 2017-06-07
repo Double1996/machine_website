@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327081741) do
+ActiveRecord::Schema.define(version: 20170607115750) do
+
+  create_table "exams", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "join_options", force: :cascade do |t|
+    t.integer  "response_option_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -45,6 +58,20 @@ ActiveRecord::Schema.define(version: 20170327081741) do
     t.index ["followed_id"], name: "index_relationships_on_followed_id"
     t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
+  end
+
+  create_table "respondents", force: :cascade do |t|
+    t.integer  "exam_id"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "response_options", force: :cascade do |t|
+    t.integer  "question_id"
+    t.text     "text"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,2 @@
+class ResponseOption < ApplicationRecord
+end
