@@ -1,0 +1,210 @@
+/*-------------------------------------------------*/
+/* =  13.Footer
+/*-------------------------------------------------*/
+footer, .footer {
+  background-color: #263238;
+}
+
+footer .text, .footer .text {
+  padding: 50px;
+}
+
+@media screen and (max-width: 991px) {
+  footer .text, .footer .text {
+    padding-bottom: 0px;
+  }
+}
+
+footer .text.small, .footer .text.small {
+  padding: 50px 25px;
+}
+
+@media screen and (max-width: 991px) {
+  footer .text.small, .footer .text.small {
+    padding: 25px 50px 0 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  footer .text:last-child, .footer .text:last-child {
+    padding: 25px 50px 50px 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  footer .col-sm-12, .footer .col-sm-12 {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer .col-sm-3, .footer .col-sm-3 {
+    margin-bottom: 30px;
+  }
+}
+
+footer .logo, .footer .logo {
+  height: 40px;
+  margin-bottom: 18px;
+}
+
+footer .logo img, .footer .logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+footer p, .footer p {
+  max-width: 350px;
+  font-size: 14px;
+  color: white;
+}
+
+@media screen and (max-width: 991px) {
+  footer p, .footer p {
+    max-width: none;
+  }
+}
+
+footer h4, .footer h4 {
+  margin-top: 18px;
+}
+
+@media screen and (max-width: 991px) {
+  footer ul.sitemap, footer ul.info, .footer ul.sitemap, .footer ul.info {
+    margin-bottom: 18px;
+  }
+}
+
+footer ul.sitemap li, footer ul.info li, .footer ul.sitemap li, .footer ul.info li {
+  color: #F6F6F6;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 300;
+}
+
+footer ul.sitemap li a, footer ul.info li a, .footer ul.sitemap li a, .footer ul.info li a {
+  color: #F6F6F6;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 300;
+}
+
+footer ul.sitemap li a:hover, footer ul.info li a:hover, .footer ul.sitemap li a:hover, .footer ul.info li a:hover {
+  color: #3367D6;
+}
+
+footer ul.social, .footer ul.social {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+footer ul.social li, .footer ul.social li {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 15px;
+  color: white;
+}
+
+footer ul.social li:first-child, .footer ul.social li:first-child {
+  padding-right: 10px;
+}
+
+footer ul.social li i, .footer ul.social li i {
+  color: white;
+  padding: 0 5px;
+  transition: ease .4s color;
+}
+
+footer ul.social li i:hover, .footer ul.social li i:hover {
+  color: #3367D6;
+  transition: ease .4s color;
+}
+
+footer #newsletter-form, .footer #newsletter-form {
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+  max-width: 350px;
+}
+
+#copy {
+  background-color: #20292E;
+}
+
+@media screen and (max-width: 991px) {
+  #copy .col-md-6 {
+    text-align: left !important;
+  }
+}
+
+#copy .text {
+  padding: 18px 50px;
+}
+
+@media screen and (max-width: 991px) {
+  #copy .text:first-child {
+    padding: 18px 50px 2px 50px;
+  }
+  #copy .text:last-child {
+    padding: 2px 50px 18px 50px;
+  }
+}
+
+#copy p {
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+#copy p a {
+  color: white;
+  -webkit-transform: color .4s ease;
+  -ms-transform: color .4s ease;
+  transform: color .4s ease;
+}
+
+#copy p a:hover {
+  color: #3367D6;
+  -webkit-transform: color .4s ease;
+  -ms-transform: color .4s ease;
+  transform: color .4s ease;
+}
+
+#copy ul li {
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  position: relative;
+}
+
+#copy ul li:after {
+  content: "|";
+  margin: 0 0 0 5px;
+}
+
+#copy ul li:last-child:after {
+  content: "";
+  margin: 0;
+}
+
+#copy ul li a {
+  color: white;
+  -webkit-transform: color .4s ease;
+  -ms-transform: color .4s ease;
+  transform: color .4s ease;
+}
+
+#copy ul li a:hover {
+  color: #3367D6;
+  -webkit-transform: color .4s ease;
+  -ms-transform: color .4s ease;
+  transform: color .4s ease;
+}
+
+.footer.section {
+  padding-top: 50px !important;
+}
