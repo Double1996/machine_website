@@ -5,3 +5,123 @@
   padding-top: 100px;
   padding-bottom: 200px;
 }
+
+.login-body {
+  background-color: #f1f2f7;
+  padding-bottom: 200px;
+}
+
+.form-signin {
+  max-width: 330px;
+  margin: 100px auto 0;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.form-signin h2.form-signin-heading {
+  margin: 0;
+  padding:20px 15px;
+  text-align: center;
+  background: #41cac0;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-signin .checkbox {
+  margin-bottom: 14px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+  color: #b6b6b6;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"], .form-signin input[type="password"] {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #eaeaea;
+  box-shadow: none;
+  font-size: 12px;
+}
+
+.form-signin .btn-login {
+  background: #f67a6e;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 4px #e56b60;
+  margin-bottom: 20px;
+}
+
+.form-signin p {
+  text-align: center;
+  color: #b6b6b6;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.form-signin a {
+  color: #b6b6b6;
+}
+
+.form-signin a:hover {
+  color: #41cac0;
+}
+
+.login-wrap {
+  padding: 20px;
+}
+
+.login-social-link  {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.login-social-link a {
+  color: #fff;
+  padding: 15px 28px;
+  border-radius: 4px;
+}
+
+.login-social-link a:hover {
+  color: #fff;
+}
+
+.login-social-link a i {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.login-social-link a.facebook {
+  background: #5193ea;
+  margin-right: 22px;
+  box-shadow: 0 4px #2775e2;
+  float:left;
+}
+
+.login-social-link a.twitter {
+  background: #44ccfe;
+  box-shadow: 0 4px #2bb4e8;
+  float:left;
+}

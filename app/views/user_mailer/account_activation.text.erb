@@ -1,5 +1,5 @@
-Hi <%= @user.name %>,
+Hello <%= @user.name %>,
 
-Welcome to the Sample App! Click on the link below to activate your account:
+欢迎使用太原工业学院机械工程系的机械材料网，点击以下链接，激活您的用户账号
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
