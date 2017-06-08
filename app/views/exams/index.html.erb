@@ -1,0 +1,30 @@
+<div class="home-page">
+  <header class="text-center">
+    <h1>
+      <i class="fa fa-yoast" aria-hidden="true"></i>
+      <strong>Surveyor:</strong>
+    </h1>
+    <h1>Tell Me #allthethings!</h1>
+    <hr>
+    <p>
+      Click on a survey below to take it or create one of your own!
+    </p>
+  </header> <!-- Top title finish here -->
+  <h3><strong>Take a Survey</strong></h3>
+  <ul class="fa-ul">
+    <% @exams.each do |exam| %>
+        <li>
+          <i class="fa-li fa fa-flag"></i>
+          <h3><strong><%= exam.title.capitalize %></strong></h3>
+          <p>
+            <small>
+              <span class="text-muted"><%= "Created at:  #{exam.created_at.in_time_zone('Asia/Shanghai')}" %></span>
+            </small>
+          </p>
+          <p>
+            <%= survey.description.capitalize %>
+          </p>
+    <% end %>
+    </li>
+  </ul>
+</div>
