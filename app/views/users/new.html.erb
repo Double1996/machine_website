@@ -1,23 +1,19 @@
-<% provide(:title, '注册') %>
-<div class="home-page">
+<% provide(:title, "注册") %>
+<div class="login-body">
   <div class="container">
-    <h1>注册</h1>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+    <div class="form-signin">
+      <h2 class="form-signin-heading">账号注册</h2>
+      <div class="login-wrap">
+
         <%= form_for(@user) do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
-            <%= f.label :name, "昵称" %>
             <%= f.text_field :name, class: 'form-control' %>
 
-            <%= f.label :email, "email" %>
-            <%= f.email_field :email, class: 'form-control' %>
+            <%= f.email_field :email, class: 'form-control', placeholder: '输入电子邮件' %>
 
-            <%= f.label :password, "密码" %>
             <%= f.password_field :password, class: 'form-control' %>
 
-            <%= f.label :password_confirmation, "确认密码" %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
-
             <%= f.submit "创建我的账号", class: "btn btn-primary" %>
         <% end %>
       </div>

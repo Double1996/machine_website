@@ -29,8 +29,8 @@
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
-  font-weight: 300;
   font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
 .form-signin .checkbox {
@@ -73,6 +73,17 @@
   margin-bottom: 20px;
 }
 
+.form-signin .btn-sign {
+  background: #f67a6e;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 4px #e56b60;
+  margin-bottom: 20px;
+
+}
+
 .form-signin p {
   text-align: center;
   color: #b6b6b6;
@@ -111,17 +122,4 @@
 .login-social-link a i {
   font-size: 20px;
   padding-right: 10px;
-}
-
-.login-social-link a.facebook {
-  background: #5193ea;
-  margin-right: 22px;
-  box-shadow: 0 4px #2775e2;
-  float:left;
-}
-
-.login-social-link a.twitter {
-  background: #44ccfe;
-  box-shadow: 0 4px #2bb4e8;
-  float:left;
 }

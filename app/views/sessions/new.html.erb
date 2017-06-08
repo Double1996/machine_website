@@ -1,33 +1,24 @@
 <% provide(:title, "登录") %>
 <div class="login-body">
   <div class="container">
-    <form class="form-signin" action="index.html">
-      <h2 class="form-signin-heading">登录</h2>
+    <div class="form-signin">
+      <h2 class="form-signin-heading">机械材料教学网</h2>
       <%= form_for(:session, url: login_path) do |f| %>
-      <div class="login-wrap">
-        <input type="text" class="form-control" placeholder="User ID" autofocus value="admin">
-        <input type="password" class="form-control" placeholder="Password">
-        <label class="checkbox">
-          <%= f.label :remember_me, class: "checkbox inline" do %>
-              <%= f.check_box :remember_me %>
-              <span>记住这台电脑</span>
-              <%= link_to "忘记密码?", new_password_reset_path, class: "pull-right"%>
-          <% end %>
-        </label>
+          <div class="login-wrap">
+            <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+            <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+            <label class="checkbox">
+              <%= f.label :remember_me, class: "checkbox inline" do %>
+                  <%= f.check_box :remember_me %>
+                  <span>记住这台电脑</span>
+                  <%= link_to "忘记密码?", new_password_reset_path, class: "pull-right" %>
+              <% end %>
+            </label>
+            <%= f.submit "登录", class: "btn btn-lg btn-login btn-block " %>
       <% end %>
-        <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
-        <p>或者您可以使用第三方服务登录</p>
-        <div class="login-social-link">
-          <a href="index.html" class="facebook">
-            <i class="icon-facebook"></i>
-            facebook
-          </a>
-          <a href="index.html" class="twitter">
-            <i class="icon-twitter"></i>
-            twirrere
-          </a>
-        </div>
+      <p>或者您可以在线注册新用户</p>
+      <%= link_to "立即注册", signup_path , class: "btn btn-primary"%>
       </div>
-    </form>
+    </div>
   </div>
 </div>
