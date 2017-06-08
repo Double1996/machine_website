@@ -18,4 +18,12 @@ Rails.application.routes.draw do
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
   resources :exams,               only: [:index]
+
+  namespace :admin, as: 'admin' do
+    root 'home#index', as: 'index'
+    resources :users
+    resources :exams
+    resources :questions
+    resources :respondents
+  end
 end

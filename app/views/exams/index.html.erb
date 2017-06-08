@@ -1,30 +1,129 @@
-<div class="home-page">
-  <header class="text-center">
-    <h1>
-      <i class="fa fa-yoast" aria-hidden="true"></i>
-      <strong>Surveyor:</strong>
-    </h1>
-    <h1>Tell Me #allthethings!</h1>
-    <hr>
-    <p>
-      Click on a survey below to take it or create one of your own!
-    </p>
-  </header> <!-- Top title finish here -->
-  <h3><strong>Take a Survey</strong></h3>
-  <ul class="fa-ul">
-    <% @exams.each do |exam| %>
-        <li>
-          <i class="fa-li fa fa-flag"></i>
-          <h3><strong><%= exam.title.capitalize %></strong></h3>
-          <p>
-            <small>
-              <span class="text-muted"><%= "Created at:  #{exam.created_at.in_time_zone('Asia/Shanghai')}" %></span>
-            </small>
-          </p>
-          <p>
-            <%= survey.description.capitalize %>
-          </p>
-    <% end %>
-    </li>
-  </ul>
-</div>
+<!--  Main Wrap  -->
+<div id="main-wrap">
+  <!--  Page Content  -->
+  <div id="page-content" class="header-static">
+    <!--  Page Header  -->
+    <div id="page-header" class="secondary-background">
+      <div class="container">
+        <div class="row no-margin">
+          <div class="text">
+            <h1 class="white">在线考试</h1>
+            <ul class="breadcrumb white">
+              <li>机械工程</li>
+              <li>机械工程材料</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  END Page Header  -->
+    <div id="home-wrap" class="content-section fullpage-wrap">
+      <div class="container">
+        <!-- Service -->
+        <div class="row no-margin padding-lg">
+          <div class="col-md-4 padding-leftright-null">
+            <div class="text padding-topbottom-null">
+              <h2 class="margin-bottom-null left">Web Desing.</h2>
+            </div>
+          </div>
+          <div class="col-md-8 padding-leftright-null">
+            <div class="text padding-topbottom-null">
+              <h3>Quality and Creativity</h3>
+              <p class="margin-bottom-null">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END Service -->
+      </div>
+      <div class="light-background">
+        <div class="container">
+          <!-- Service -->
+          <div class="row no-margin padding-lg">
+            <div class="col-md-4 padding-leftright-null">
+              <div class="text padding-topbottom-null">
+                <h2 class="margin-bottom-null left">Web Development.</h2>
+              </div>
+            </div>
+            <div class="col-md-8 padding-leftright-null">
+              <div class="text padding-topbottom-null">
+                <h3>Experience and Support</h3>
+                <p class="margin-bottom-null">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- END Service -->
+        </div>
+      </div>
+      <div class="container">
+        <!-- Service -->
+        <div class="row no-margin padding-lg">
+          <div class="col-md-4 padding-leftright-null">
+            <div class="text padding-topbottom-null">
+              <h2 class="margin-bottom-null left">Web Marketing.</h2>
+            </div>
+          </div>
+          <div class="col-md-8 padding-leftright-null">
+            <div class="text padding-topbottom-null">
+              <h3>Increase your sales</h3>
+              <p class="margin-bottom-null">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END Service -->
+      </div>
+      <div class="light-background">
+        <div class="container">
+          <!-- Service -->
+          <div class="row no-margin padding-lg">
+            <div class="col-md-4 padding-leftright-null">
+              <div class="text padding-topbottom-null">
+                <h2 class="margin-bottom-null left">Branding.</h2>
+              </div>
+            </div>
+            <div class="col-md-8 padding-leftright-null">
+              <div class="text padding-topbottom-null">
+                <h3>Grow your business</h3>
+                <p class="margin-bottom-null">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- END Service -->
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+<ul class="fa-ul">
+  <% @exams.each do |exam| %>
+      <li>
+        <i class="fa-li fa fa-flag"></i>
+        <h3><strong><%= exam.title.capitalize %></strong></h3>
+        <p>
+          <small>
+            <span class="text-muted"><%= "Created at:  #{exam.created_at.in_time_zone('Asia/Shanghai')}" %></span>
+          </small>
+        </p>
+        <p>
+          <%= survey.description.capitalize %>
+        </p>
+  <% end %>
+  </li>
+</ul>
