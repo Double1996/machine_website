@@ -9,10 +9,6 @@
 
 /* universal */
 
-body {
-  padding-top: 60px;
-}
-
 section {
   overflow: auto;
 }
@@ -243,4 +239,9 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.alert {
+  padding-top: 80px;
+  margin: 0;
 }
