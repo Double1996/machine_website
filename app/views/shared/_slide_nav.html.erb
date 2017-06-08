@@ -1,0 +1,23 @@
+<%
+  nav_list = [
+      {url: admin_index_path, icon: 'archive', text: '网站数据'},
+      {url: admin_users_path, icon: 'group', text: '用户管理'},
+      {url: admin_users_path, icon: 'group', text: '新闻管理'},
+      {url: admin_exams_path, icon: 'group', text: '考试管理'},
+      {url: admin_users_path, icon: 'group', text: '论坛管理'},
+      {url: admin_users_path, icon: 'group', text: '视频管理'},
+      {url: admin_users_path, icon: 'group', text: '课件管理'},
+      {url: admin_users_path, icon: 'group', text: '文章管理'}
+  ]
+%>
+
+<div id="side-nav">
+  <div class="list-group side-nav-list">
+    <% nav_list.each_with_index do |item, no| %>
+        <%= content_tag :a, href: item[:url], class: "list-group-item #{ 'active' if no.to_s == yield(:index) }" do -%>
+            <%= content_tag :i, '', class: "fa fa-#{item[:icon]} fa-fw" %>
+            <%= content_tag :span, "&nbsp;#{item[:text]}".html_safe %>
+        <% end -%>
+    <% end %>
+  </div>
+</div>

@@ -3,8 +3,8 @@
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag    'application', media: 'all',
-                             'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all',
+                          'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= render 'layouts/shim' %>
 </head>
@@ -13,7 +13,21 @@
 <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
 <% end %>
-<%= yield %>
+<div class="home-page">
+  <div class="container-fluid" id="mainer">
+    <div class="row">
+      <div class="col-xs-4 col-sm-4 col-md-2">
+        <%= render 'shared/slide_nav' %>
+      </div>
+      <div class="col-xs-8 col-sm-8 col-md-10">
+        <div id="content">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= yield %>
+</div>
 <%= render 'layouts/footer' %>
 </body>
 </html>
