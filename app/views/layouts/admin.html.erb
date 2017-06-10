@@ -13,7 +13,6 @@
 <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
 <% end %>
-<div class="home-page">
   <div class="container-fluid" id="mainer">
     <div class="row">
       <div class="col-xs-4 col-sm-4 col-md-2">
@@ -26,7 +25,5 @@
       </div>
     </div>
   </div>
-  <%= yield %>
-</div>
 </body>
 </html>
