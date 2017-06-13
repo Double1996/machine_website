@@ -32,5 +32,4 @@ Homeland.configure do
   # If you use Devise, current_user is correct
   self.current_user_method = 'current_user'
 
-  self.i18n = ''
 end
