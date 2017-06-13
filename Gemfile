@@ -16,7 +16,9 @@ gem 'coffee-rails',            '4.2.1'
 gem 'jquery-rails',            '4.1.1'
 gem 'turbolinks',              '5.0.0'
 gem 'jbuilder',                '2.4.1'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'homeland'
+gem 'github-markup'
 
 group :development, :test do
   gem 'sqlite3', '1.3.12'

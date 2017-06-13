@@ -33,6 +33,10 @@ class User < ApplicationRecord
     SecureRandom.urlsafe_base64
   end
 
+  def profile_url
+
+  end
+
   # Remembers a user in the database for use in persistent sessions.
   def remember
     self.remember_token = User.new_token

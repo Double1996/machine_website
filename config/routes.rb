@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Homeland::Engine, at: "/homeland"
   root   'static_pages#home'
   get    '/help',    to: 'static_pages#help'
   get    '/about',   to: 'static_pages#about'
