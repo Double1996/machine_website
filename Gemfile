@@ -19,6 +19,7 @@ gem 'jbuilder',                '2.4.1'
 gem 'font-awesome-rails'
 gem 'homeland'
 gem 'github-markup'
+gem 'qiniu',                 '~> 6.8.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.12'

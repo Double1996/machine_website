@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170612061305) do
+ActiveRecord::Schema.define(version: 20170613092508) do
 
   create_table "exams", force: :cascade do |t|
     t.string   "title"
@@ -78,6 +78,14 @@ ActiveRecord::Schema.define(version: 20170612061305) do
     t.datetime "updated_at", null: false
     t.string   "picture"
     t.index ["user_id"], name: "index_microposts_on_user_id"
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string   "url"
+    t.string   "name"
+    t.string   "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "papers", force: :cascade do |t|
