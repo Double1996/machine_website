@@ -1,0 +1,2 @@
+class FillResponsesController < ApplicationController
+end

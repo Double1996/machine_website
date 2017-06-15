@@ -1,0 +1,2 @@
+class FillResponse < ApplicationRecord
+end

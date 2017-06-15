@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     root 'home#index', as: 'index'
     resources :users
     resources :exams
+    resources :choices,   only: [:index]
     resources :questions
     resources :respondents
   end
