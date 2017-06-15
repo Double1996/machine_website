@@ -1,0 +1,13 @@
+<%= form_for @exam , url: admin_exams_path do |f| %>
+    <div class="form-group">
+      <h3><strong><i class="fa fa-tag" aria-hidden="true"></i><%= f.label :title, "考试标题" %></strong></h3>
+      <%= f.text_field :title, class: "form-control text-center input-lg" %>
+    </div>
+    <div class="form-group">
+      <h3><strong><i class="fa fa-pencil" aria-hidden="true"></i>  <%= f.label :description, "添加考试介绍" %></strong></h3>
+      <%= f.text_area :description, class: "form-control text-center input-lg", rows: 3 %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "保存", class: "btn btn-primary btn-lg btn-block" %>
+    </div>
+<% end %>

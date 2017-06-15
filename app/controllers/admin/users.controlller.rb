@@ -1,4 +1,4 @@
-class Admin::UserController < Admin::ApplicationController
+class Admin::UsersController < Admin::ApplicationController
   def index
     case params[:by]
       when 'normal'

@@ -8,6 +8,6 @@ class ExamsController < ApplicationController
   private
 
   def exam_params
-    params.require(:exam).permit(:title, :description)
+    params.require(:exams).permit(:title, :description)
   end
 end
