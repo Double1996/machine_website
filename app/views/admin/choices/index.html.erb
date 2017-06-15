@@ -12,8 +12,7 @@
     <dd><p><small>Choose which type of question to add.</small></p></dd>
   </dl>
 
-
-  <%= form_tag choose_path, method: "get" do %>
+  <%= form_tag admin_choose_path, method: "get" do %>
       <%= text_field_tag :exam_id, @exam.id, hidden: true %>
       <div class="form-group">
         <%= select_tag :question_type, options_for_select(Question.question_types), class: "form-control input-lg"  %>

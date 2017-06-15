@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   namespace :admin, as: 'admin' do
     root 'home#index', as: 'index'
+    get  'choose', to: 'choices#choose'
     resources :users
     resources :exams
     resources :choices,   only: [:index]
