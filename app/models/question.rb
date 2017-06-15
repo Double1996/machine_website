@@ -13,7 +13,7 @@ class Question < ApplicationRecord
   end
 
   def has_no_options?
-    self.response_options.empty?
+    self.response_options.any?
   end
 
   def has_content?
