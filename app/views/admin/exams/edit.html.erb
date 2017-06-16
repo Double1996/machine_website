@@ -1,27 +1,23 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="exis_questions">
-  <hr>
-  <h3><strong>Existing Questions:</strong></h3>
-  <ol>
-    <% if @exam.has_questions? %>
-        <% @exam.questions.each do |question| %>
-            <% unless question.text.blank? %>
-                <h4><strong><%= question.text.capitalize %></strong></h4>
-                <ol type="A">
-                  <% question.response_options.each do |response_option| %>
-                      <li><%= response_option.text %></li>
-                  <% end %>
-                </ol>
-                <%= link_to "Delete Question", admin_question_path(question), method: "delete", data: {confirm: "Are you sure?"} %>
-            <% end %>
-        <% end %>
-    <% else %>
-        <h4>There are no questions yet. Mother fucker.</h4>
-    <% end %>
-  </ol>
+<div class="home-page">
+  <div class="exis_questions">
+    <hr>
+    <h3><strong>Existing Questions:</strong></h3>
+    <ol>
+      <% if @exam.has_questions? %>
+          <% @exam.questions.each do |question| %>
+              <% unless question.text.blank? %>
+                  <h4><strong><%= question.text.capitalize %></strong></h4>
+                  <ol type="A">
+                    <% question.response_options.each do |response_option| %>
+                        <li><%= response_option.text %></li>
+                    <% end %>
+                  </ol>
+                  <%= link_to "Delete Question", admin_question_path(question), method: "delete", data: {confirm: "Are you sure?"} %>
+              <% end %>
+          <% end %>
+      <% else %>
+          <h4>There are no questions yet. Mother fucker.</h4>
+      <% end %>
+    </ol>
+  </div>
 </div>

@@ -16,11 +16,10 @@
           <div class="form-group">
             <h4><strong><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Option <%= i + 1 %>:</strong></h4>
             <%= f.fields_for :response_options do |response_option| %>
-                <%= response_option.text_field :text, class: "form-control input-lg" %>
+                <%= response_option.text_field :text, class: 'form-control' %>
             <% end %>
           </div>
       <% end %>
-
       <div class="form-group">
         <%= f.submit "Add Question", class: "btn btn-primary btn-lg btn-block" %>
       </div>

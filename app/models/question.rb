@@ -1,6 +1,9 @@
 class Question < ApplicationRecord
   belongs_to :exam
   has_many :response_options, dependent: :destroy
+  has_many :multi_responses, dependent: :destroy
+
+  accepts_nested_attributes_for :response_options, :reject_if => :all_blank, :allow_destroy => true
 
   validates :text, length: {within: 1..200}, allow_nil: true
 

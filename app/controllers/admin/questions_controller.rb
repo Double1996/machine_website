@@ -26,8 +26,14 @@ class Admin::QuestionsController < Admin::ApplicationController
   def update
     @question = Question.find_by_id(params[:id])
     if @question && @question.update(question_params)
-      flash[:success] = ["Options for question ID: #{@question.id} has been updated."]
-      redirect_path_for_update @question
+      if @question.response_options.any?
+        flash[:success] = ["Options for question ID: #{@question.id} has been updated."]
+        redirect_path_for_update @question
+      else
+        flash[:danger] = '没有选项'
+        redirect_to new_admin_response_option_path(:question_id => @question.id)
+      end
+
     else
       flash[:danger] = @question.errors.full_messages
       redirect_to new_admin_response_option_path(:question_id => @question.id)
@@ -48,6 +54,13 @@ class Admin::QuestionsController < Admin::ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:exam_id, :text, {:response_options_attributes => [:text]}, :options)
+    params.require(:question).permit(:exam_id,
+                                     :text,
+                                     :options,
+                                     {
+                                         :response_options_attributes => [
+                                             :text
+                                         ]
+                                     })
   end
 end

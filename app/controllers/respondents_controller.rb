@@ -1,7 +1,10 @@
 class RespondentsController < ApplicationController
+  before_action :logged_in_user
+
   def new
     @exam = Exam.find_by_id(params[:exam_id])
     @respondent = Respondent.new
+    @respondent.multi_responses.build
   end
 
 
