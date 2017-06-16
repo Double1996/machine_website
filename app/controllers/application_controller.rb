@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       store_location
       flash[:danger] = "请登录！"
-      redirect_to login_url
+      redirect_to redirect_back_path
     end
   end
 
@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     return if current_user.blank?
     unless current_user.activated?
       flash[:danger] = "请激活您的账号"
-      redirect_to root_path
+      redirect_to redirect_back_path
     end
   end
 
