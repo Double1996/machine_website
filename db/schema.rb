@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170615100630) do
+ActiveRecord::Schema.define(version: 20170615123217) do
 
   create_table "exams", force: :cascade do |t|
     t.string   "title"
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(version: 20170615100630) do
     t.datetime "updated_at", null: false
     t.integer  "exam_id"
     t.text     "text"
+    t.boolean  "multi"
     t.index ["exam_id"], name: "index_questions_on_exam_id"
   end
 

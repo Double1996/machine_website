@@ -8,7 +8,7 @@ class Exam < ApplicationRecord
 
 
   def has_questions?
-    self.questions.empty? ? true : false
+    self.questions.any? ? true : false
   end
 
   def has_no_questions?

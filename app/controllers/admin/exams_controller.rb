@@ -19,7 +19,7 @@ class Admin::ExamsController < Admin::ApplicationController
   end
 
   def edit
-
+    @exam = Exam.find_by_id(params[:id])
   end
 
   def destroy
