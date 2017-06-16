@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "Micropost created!"
+      flash[:success] = "微博创建成功"
       redirect_to root_url
     else
       @feed_items = []
@@ -15,7 +15,7 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-    flash[:success] = "Micropost deleted"
+    flash[:success] = "微博已经被删除"
     redirect_to request.referrer || root_url
   end
 
@@ -24,6 +24,7 @@ class MicropostsController < ApplicationController
     def micropost_params
       params.require(:micropost).permit(:content, :picture)
     end
+
     def correct_user
       @micropost = current_user.microposts.find_by(id: params[:id])
       redirect_to root_url if @micropost.nil?

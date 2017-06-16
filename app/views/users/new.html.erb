@@ -6,10 +6,14 @@
       <div class="login-wrap">
         <%= form_for(@user) do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
-            <%= f.text_field :name, class: 'form-control', placeholder: '输入注册昵称' %>
-            <%= f.email_field :email, class: 'form-control', placeholder: '输入电子邮件' %>
-            <%= f.password_field :password, class: 'form-control', placeholder: '输入密码' %>
-            <%= f.password_field :password_confirmation, class: 'form-control', placeholder: '再次输入密码' %>
+            <%= f.label :昵称 %>
+            <%= f.text_field :name, class: 'form-control' %>
+            <%= f.label :Email %>
+            <%= f.email_field :email, class: 'form-control' %>
+            <%= f.label :密码 %>
+            <%= f.password_field :password, class: 'form-control' %>
+            <%= f.label :确认密码 %>
+            <%= f.password_field :password_confirmation, class: 'form-control'%>
             <%= f.submit "创建我的账号", class: "btn btn-primary" %>
         <% end %>
       </div>
