@@ -32,6 +32,7 @@ class User < ApplicationRecord
   end
 
   def profile_url
+    "users/#{id}"
   end
 
   def remember
