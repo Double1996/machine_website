@@ -1,13 +1,34 @@
 class RespondentsController < ApplicationController
   def new
-    @exam = Exam.find_by_id(params[:survey_id])
+    @exam = Exam.find_by_id(params[:exam_id])
     @respondent = Respondent.new
   end
 
-  private
-  def respondent_params
-    params.require(:respondent).permit(:name, :survey_id,)
 
+  def create
+    @exam = Exam.includes(:questions => :response_options).find_by_id(params[:respondent][:exam_id])
+    @respondent = Respondent.new(respondent_params)
+    if @respondent.save
+      flash[:success] = ["谢谢你的答卷，祝你好运"]
+      redirect_to redirect_back_path
+    else
+      flash.now[:danger] = @respondent.errors.full_messages
+    end
+  end
+
+  private
+
+  def respondent_params
+    params.require(:respondent).permit(
+        :name,
+        :exam_id,
+        {
+            :multi_responses_attributes => [
+                :question_id,
+                :response_option_ids,
+                :response_option_ids => []
+            ]
+        })
   end
 end
 

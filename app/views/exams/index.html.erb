@@ -25,6 +25,7 @@
                 <div class="col-md-4 padding-leftright-null">
                   <div class="text padding-topbottom-null">
                     <h2 class="margin-bottom-null left"><%= exam.title.capitalize %></h2>
+                      <%= link_to '参加考试', new_respondent_path(:exam_id => exam.id), class: 'btn-primary' %>
                   </div>
                 </div>
                 <div class="col-md-8 padding-leftright-null">

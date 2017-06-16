@@ -24,6 +24,14 @@ class Question < ApplicationRecord
     !has_content?
   end
 
+  def has_text?
+    self.text
+  end
+
+  def has_no_text?
+    !has_text?
+  end
+
 
 
 

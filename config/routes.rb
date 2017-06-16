@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
-  resources :exams,               only: [:index]
+  resources :exams
+  resources :respondents
 
   namespace :admin, as: 'admin' do
     root 'home#index', as: 'index'

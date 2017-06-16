@@ -29,4 +29,8 @@ class ApplicationController < ActionController::Base
     I18n.locale = 'zh-CN'
   end
 
+  def redirect_back_path
+    request.referer || root_path
+  end
+
 end

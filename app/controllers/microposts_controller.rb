@@ -6,7 +6,7 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = "微博创建成功"
-      redirect_to root_url
+      redirect_to redirect_back_path
     else
       @feed_items = []
       render 'static_pages/home'
@@ -16,7 +16,7 @@ class MicropostsController < ApplicationController
   def destroy
     @micropost.destroy
     flash[:success] = "微博已经被删除"
-    redirect_to request.referrer || root_url
+    redirect_to redirect_back_path
   end
 
   private
