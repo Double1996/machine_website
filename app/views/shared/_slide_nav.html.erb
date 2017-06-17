@@ -9,7 +9,6 @@
   ]
 %>
 
-<div id="side-nav" >
   <div class="list-group side-nav-list" data-spy="affix" data-offset-top="125">
     <% nav_list.each_with_index do |item, no| %>
         <%= content_tag :a, href: item[:url], class: "list-group-item #{ 'active' if no.to_s == yield(:index) }" do -%>
@@ -18,4 +17,3 @@
         <% end -%>
     <% end %>
   </div>
-</div>

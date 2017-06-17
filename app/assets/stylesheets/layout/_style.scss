@@ -4304,9 +4304,6 @@ aside.left form .form-input span.form-button {
   }
 }
 
-#nav .nav-left a.btn-alt, #nav .nav-right a.btn-alt {
-  line-height: 38px;
-}
 
 /*-------------------------------------------------*/
 /* =  9.Page
@@ -5383,58 +5380,6 @@ aside.page-sidebar .widget-wrapper p {
   transition: all .4s ease;
 }
 
-#contact-form #submit-contact.btn-alt, #search-form #submit-contact.btn-alt {
-  height: 36px;
-  line-height: 36px;
-  text-transform: none;
-  font-weight: 400;
-  background-color: transparent;
-  border: 1px solid #3367D6;
-  color: #3367D6;
-  transition: all .4s ease;
-  text-transform: uppercase;
-  border-radius: 2px;
-  padding-right: 30px;
-  padding-left: 30px;
-  text-align: center;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-  display: inline-block;
-  overflow: hidden;
-  outline: none;
-}
-
-#contact-form #submit-contact.btn-alt:hover, #search-form #submit-contact.btn-alt:hover {
-  background-color: #3367D6;
-  color: white;
-  transition: all .4s ease;
-}
-
-#contact-form #submit-contact.btn-alt.shadow, #search-form #submit-contact.btn-alt.shadow {
-  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
-}
-
-#contact-form #submit-contact.btn-alt.white, #search-form #submit-contact.btn-alt.white {
-  border: 1px solid white;
-}
-
-#contact-form #submit-contact.btn-alt.white:hover, #search-form #submit-contact.btn-alt.white:hover {
-  background-color: white;
-  color: #3367D6 !important;
-  transition: all .4s ease;
-}
-
-#contact-form #submit-contact.btn-alt.active, #search-form #submit-contact.btn-alt.active {
-  background-color: #3367D6;
-  color: white;
-  transition: all .4s ease;
-}
-
-#contact-form #submit-contact.btn-alt.active:hover, #search-form #submit-contact.btn-alt.active:hover {
-  background-color: transparent;
-  color: #3367D6 !important;
-  transition: all .4s ease;
-}
 
 #contact-form .form-button, #search-form .form-button {
   position: absolute;

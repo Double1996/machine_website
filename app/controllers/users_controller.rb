@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = "请激活你的账号."
+      flash[:info] = "请检查你的邮箱，激活你的账号."
       redirect_to root_url
     else
       render 'new'

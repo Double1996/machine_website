@@ -11,7 +11,7 @@ class Admin::ExamsController < Admin::ApplicationController
     @exam = Exam.new(exam_params)
     if @exam.save
       flash[:success] = "考试: #{@exam.title} 已经被创建了"
-      redirect_to admin_exams_path
+      redirect_to admin_choices_path(:exam_id => @exam.id)
     else
       flash[:danger] = @exam.errors.full_messages
       render :new
@@ -28,7 +28,7 @@ class Admin::ExamsController < Admin::ApplicationController
       flash[:success] = ["这次考试已经被删除了"]
       redirect_to root_path
     else
-      flash[:danger] = survey.errors.full_messages
+      flash[:danger] = exam.errors.full_messages
       redirect_to root_path
     end
   end

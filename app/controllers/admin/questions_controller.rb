@@ -25,19 +25,17 @@ class Admin::QuestionsController < Admin::ApplicationController
 
   def update
     @question = Question.find_by_id(params[:id])
+    @exam = Exam.includes(:questions).find_by_id(@question.exam_id)
     if @question && @question.update(question_params)
       if @question.response_options.any?
         flash[:success] = ["Options for question ID: #{@question.id} has been updated."]
-        redirect_path_for_update @question
       else
         flash[:danger] = '没有选项'
-        redirect_to new_admin_response_option_path(:question_id => @question.id)
       end
-
     else
       flash[:danger] = @question.errors.full_messages
-      redirect_to new_admin_response_option_path(:question_id => @question.id)
     end
+    redirect_to new_admin_question_path(:exam_id => @exam.id)
   end
 
   def destroy
