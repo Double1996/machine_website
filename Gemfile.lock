@@ -362,6 +362,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.4)
+    videojs_rails (4.12.15)
     web-console (3.1.1)
       activemodel (>= 4.2)
       debug_inspector
@@ -407,6 +408,7 @@ DEPENDENCIES
   turbolinks (= 5.0.0)
   tzinfo-data
   uglifier (= 3.0.0)
+  videojs_rails
   web-console (= 3.1.1)
   will_paginate (= 3.1.0)
 
