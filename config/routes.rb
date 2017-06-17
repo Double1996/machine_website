@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :relationships,       only: [:create, :destroy]
   resources :exams
   resources :respondents
+  resources :videos
 
   namespace :admin, as: 'admin' do
     root 'home#index', as: 'index'
@@ -30,5 +31,6 @@ Rails.application.routes.draw do
     resources :questions
     resources :respondents
     resources :response_options, only: [:new, :create, :edit, :update]
+    resources :videos
   end
 end

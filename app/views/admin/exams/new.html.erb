@@ -1,20 +1,11 @@
-<br>
-<br>
-<br>
-
-
-<div class="new-survey text-center">
-  <header>
-    <h1><strong>新建一个考试</strong></h1>
-    <hr>
-    <h3><strong>第一步添加考试详情</strong> | <span class="text-muted">2.添加考试题目</span></h3>
-  </header>
-
-  <br>
-  <main>
-    <p>
-      首先添加的你考试标题和你的考试简介
-    </p>
-    <%= render 'form', exam: @exam %>
-  </main>
-</div>
+<header>
+  <h1><strong>新建一个考试</strong></h1>
+  <hr>
+  <h3><strong>第一步添加考试详情</strong> | <span class="text-muted">2.添加考试题目</span></h3>
+</header>
+<main>
+  <p>
+    首先添加的你考试标题和你的考试简介
+  </p>
+  <%= render 'form', exam: @exam %>
+</main>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170615123217) do
+ActiveRecord::Schema.define(version: 20170617124252) do
 
   create_table "exams", force: :cascade do |t|
     t.string   "title"
@@ -161,6 +161,14 @@ ActiveRecord::Schema.define(version: 20170615123217) do
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
     t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "context"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

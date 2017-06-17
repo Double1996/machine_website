@@ -1,0 +1,46 @@
+<!--  Main Wrap  -->
+<div id="main-wrap">
+  <!--  Page Content  -->
+  <div id="page-content" class="header-static">
+    <!--  Page Header  -->
+    <div id="page-header" class="secondary-background">
+      <div class="container">
+        <div class="row no-margin">
+          <div class="text">
+            <h1 class="white">在线视频</h1>
+            <ul class="breadcrumb white">
+              <li><a href="#">Home</a></li>
+              <li>Videos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Team section  -->
+    <div class="container">
+      <div class="row no-margin padding-lg">
+        <div class="col-md-12 padding-leftright-null">
+          <div class="text text-center padding-topbottom-null">
+            <h3 class="big">视频列表</h3>
+          </div>
+        </div>
+        <!--  Team  -->
+        <div class="row team padding-onlytop-md">
+          <% @videos.each do |video| %>
+              <div class="col-xs-6 col-md-3 padding-leftright-null">
+                <div class="person">
+                  <img src="assets/img/youku.jpg" alt="" class="img-responsive">
+                  <h3>
+                    <%= video.name %></h3>
+                  <span><%= video.context %></span>
+                  <ul>
+                    <li style="margin-left: 40px"><%= link_to '在线播放',video_path(video) ,class: 'btn-alt small shadow' %></li>
+                  </ul>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
