@@ -1,10 +1,29 @@
-# Ruby on Rails Tutorial sample application
+# MachineWebsite Application
 
-This is the reference implementation of the sample application for the 4th edition of [*Ruby on Rails Tutorial: Learn Web Development with Rails*](http://www.railstutorial.org/) by [Michael Hartl](http://www.michaelhartl.com/).
+这是我个人毕业设计 为太原工业学院机械工程系建设的[*《机械工程材料》教学网站*](http://www.loujuhong.cn)。
 
-## License
+## Power By
+- Ruby on Rails
+- Mysql
+- Bootstrap
+- HomeLand
 
-All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/) is available jointly under the MIT License and the Beerware License. See [LICENSE.md](LICENSE.md) for details.
+## 主要功能
+
+```
+1. 在线教学视频(优酷)
+2. 后台管理
+3. 在线考试
+4. 机械社区
+5. 个人微博
+```
+
+## 大感谢
+
+- [*厦门创意社科技公司*](www.tshe.com)
+- 太原工业学院机械工程系
+- 杨瑞（老板）
+- 任文慧（前女友，本网站第一个用户）
 
 ## Getting started
 
@@ -12,9 +31,9 @@ To get started with the app, clone the repo and then install the needed gems:
 
 ```
 $ cd ~/tmp
-$ git clone https://bitbucket.org/railstutorial/sample_app_4th_ed.git sample_app
-$ cd sample_app
-$ bundle install --without production
+$ git clone https://github.com/ForrestDouble/machine_website.git
+$ cd paper
+$ bundle install
 ```
 
 Next, migrate the database:
@@ -54,8 +73,3 @@ where you can find the branch name using
 ```
 $ git branch -a
 ```
-
-A branch called `remotes/orgin/foo-bar` can be checked out using `git checkout foo-bar`.
-
-For more information, see the
-[*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
