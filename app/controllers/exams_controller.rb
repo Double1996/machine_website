@@ -4,7 +4,6 @@ class ExamsController < ApplicationController
     @exams = Exam.all.order(:id).reverse_order
   end
 
-
   private
 
   def exam_params

@@ -1,7 +1,5 @@
 <div class="home-page">
-  <div class="exis_questions">
-    <hr>
-    <h3><strong>Existing Questions:</strong></h3>
+  <h3><strong>Existing Questions:</strong></h3>
     <ol>
       <% if @exam.has_questions? %>
           <% @exam.questions.each do |question| %>
@@ -12,7 +10,7 @@
                         <li><%= response_option.text %></li>
                     <% end %>
                   </ol>
-                  <%= link_to "Delete Question", admin_question_path(question), method: "delete", data: {confirm: "Are you sure?"} %>
+                  <%= link_to "删除问题", admin_question_path(question), method: "delete", data: {confirm: "Are you sure?"} %>
               <% end %>
           <% end %>
       <% else %>
@@ -20,4 +18,3 @@
       <% end %>
     </ol>
   </div>
-</div>

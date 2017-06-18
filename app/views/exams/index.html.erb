@@ -19,29 +19,33 @@
     </div>
     <div id="home-wrap" class="content-section fullpage-wrap">
       <% @exams.each do |exam| %>
-          <div class="light-background">
-            <div class="container">
-              <div class="row no-margin padding-lg">
-                <div class="col-md-4 padding-leftright-null">
-                  <div class="text padding-topbottom-null">
-                    <h2 class="margin-bottom-null left"><%= exam.title.capitalize %></h2>
-                      <%= link_to '参加考试', new_respondent_path(:exam_id => exam.id), class: 'btn-primary' %>
-                  </div>
+          <div class="container">
+            <div class="row no-margin padding-lg">
+              <div class="col-md-4 padding-leftright-null">
+                <div class="text padding-topbottom-null">
+                  <h2 class="margin-bottom-null left"><%= exam.title.capitalize %></h2>
                 </div>
-                <div class="col-md-8 padding-leftright-null">
-                  <div class="text padding-topbottom-null">
-                    <h3>
-                      <%= exam.created_at.in_time_zone('Asia/Shanghai') %>
-                    </h3>
-                    <p class="margin-bottom-null">
-                      <%= exam.description %>
-                    </p>
-                  </div>
+              </div>
+              <div class="col-md-4 padding-leftright-null">
+                <div class="text padding-topbottom-null">
+                  <h3>
+                    发起时间：<strong style="color: #ff0e40"><%= exam.created_at.strftime("%Y-%m-%d") %></strong></h1>
+                  </h3>
+                  <p class="margin-bottom-null">
+                    <%= exam.description %>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 padding-leftright-null">
+                <div class="text padding-topbottom-null">
+                  <h2 class="margin-bottom-null right">
+                    <%= link_to '参加考试', new_respondent_path(:exam_id => exam.id), class: 'label btn-success' %>
+                  </h2>
                 </div>
               </div>
             </div>
+          </div>
       <% end %>
-      </div>
     </div>
   </div>
 </div>

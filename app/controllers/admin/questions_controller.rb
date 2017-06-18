@@ -10,7 +10,7 @@ class Admin::QuestionsController < Admin::ApplicationController
     @exam = exam_includes.find_by_id(params[:question][:exam_id])
     @question = Question.new(question_params)
     if @exam && @question.save
-      flash[:success] = ["Multi select Question ID: #{@question.id} is created"]
+      flash[:success] = [" #{@question.text} 已经创建好"]
       redirect_to new_admin_response_option_path(:question_id => @question.id)
     else
       flash.now[:danger] = @question.errors.full_messages
@@ -48,6 +48,10 @@ class Admin::QuestionsController < Admin::ApplicationController
       flash[:danger] = question.errors.full_messages
       redirect_to referer
     end
+  end
+
+  def fill_option
+
   end
 
   private

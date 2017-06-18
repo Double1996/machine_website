@@ -25,6 +25,8 @@ class RespondentsController < ApplicationController
     params.require(:respondent).permit(
         :name,
         :exam_id,
+        :student_id,
+        :student_name,
         {
             :multi_responses_attributes => [
                 :question_id,

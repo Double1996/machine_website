@@ -1,16 +1,9 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<h3><strong>Add a Multiple Choice Question:</strong></h3>
+<h3><strong>添加选择题</strong></h3>
 <div class="text-center">
   <h4><strong>1.Select Options</strong> | <span class="text-muted">2.Add Question Text</span></h4>
 </div>
 
-<%= form_for @question , url: admin_questions_path do |f| %>
+<%= form_for @question, url: admin_questions_path do |f| %>
     <%= f.hidden_field :exam_id, value: @exam.id %>
     <div class="form-group">
       <h4><i class="fa fa-pencil-square-o" aria-hidden="true"></i> How many options for this question?</h4>

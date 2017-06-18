@@ -29,12 +29,12 @@
                 <td class="center"><%= exam.description.capitalize %></td>
                 <td class="center"><%= exam.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
                 <td class="center"><%= exam.respondents.count %></td>
-                <td class="center">
+                <td>
                   <%= link_to '编辑考试', edit_admin_exam_path(exam) %>
                   <%= link_to "查看答卷", edit_admin_exam_path(exam) %>
                   <%= link_to "查看成绩", edit_admin_exam_path(exam) %>
                   <%= link_to "添加问题", admin_choices_path(:exam_id => exam.id) %>
-                </td>
+e                </td>
               </tr>
           <% end %>
           </tbody>

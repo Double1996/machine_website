@@ -5,14 +5,14 @@ class Admin::ChoicesController < Admin::ApplicationController
 
   def choose
     exam_id = params[:exam_id]
-    time = params[:question_type]
-    case time
+    type = params[:question_type]
+    case type
       when "multi"
         redirect_to new_admin_question_path(:exam_id => exam_id)
       when "fill"
-        # redirect_to new_num_range_path(:exam_id => exam_id)
+        redirect_to new_admin_question_path(:exam_id => exam_id, :option_time => 0 )
       else
-        redirect_to new_admin_question_path(:exam_id => exam_id)
+        redirect_to admin_choose_path
     end
   end
 
