@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
-<div class="container">
-  <div class="home-page">
+<div id="main-wrap">
+  <div class="user-page">
     <div class="row">
       <aside class="col-md-4">
         <section>
@@ -15,22 +15,16 @@
         <section class="micropost_form">
           <%= render 'shared/micropost_form' %>
         </section>
-        <div class="col-md-8">
-          <h3>Micropost Feed</h3>
-            <%= render @microposts %>
-        </div>
       </aside>
       <div class="col-md-8">
         <%= render 'follow_form' if logged_in? %>
-        <div style="background:#d8d1f5; color:#FFF">
-          <% if @user.microposts.any? %>
-              <h1 class="center">微博广场(<%= @user.microposts.count %>)</h1>
-              <ol class="microposts">
-                <%= render 'shared/feed' %>
-              </ol>
-              <%= will_paginate @microposts %>
-          <% end %>
-        </div>
+        <% if @user.microposts.any? %>
+            <h2 class="center">微博广场(<%= Micropost.count %>)</h2>
+            <ol class="microposts">
+              <%= render @microposts %>
+            </ol>
+            <%= will_paginate @microposts %>
+        <% end %>
       </div>
     </div>
   </div>

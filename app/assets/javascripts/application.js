@@ -3,4 +3,4 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
-//= require video
+//= require jquery-fileupload
