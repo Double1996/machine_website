@@ -20,6 +20,7 @@ gem 'font-awesome-rails'
 gem 'homeland'
 gem 'github-markup'
 
+
 #upload
 gem 'jquery-ui-rails'
 gem 'jquery-fileupload-rails'
@@ -48,7 +49,6 @@ end
 
 group :production do
   gem 'mysql2'
-  gem 'puma'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
