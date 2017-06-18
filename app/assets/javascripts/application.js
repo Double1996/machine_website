@@ -1,6 +1,7 @@
+//= require_tree .
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require turbolinks
-//= require_tree .
+//= require bootstrap-sprockets
 //= require jquery-fileupload
+//= require jquery-fileupload/basic-plus

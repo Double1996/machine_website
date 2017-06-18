@@ -19,9 +19,13 @@ gem 'jbuilder',                '2.4.1'
 gem 'font-awesome-rails'
 gem 'homeland'
 gem 'github-markup'
+
+#upload
+gem 'jquery-ui-rails'
 gem 'jquery-fileupload-rails'
 gem 'paperclip'
-gem 'therubyracer', :platforms => :ruby
+gem 'haml'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.12'

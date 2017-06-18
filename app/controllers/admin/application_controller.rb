@@ -3,6 +3,7 @@ class Admin::ApplicationController < ApplicationController
   before_action :check_activated
   before_action :check_admin
   before_action :get_current_user, except: [:destroy]
+  protect_from_forgery with: :exception
 
   layout 'admin'
 

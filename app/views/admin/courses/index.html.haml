@@ -1,0 +1,11 @@
+%h1 
+  课件列表
+  = link_to '添加一个新课件', new_admin_course_path, class: "btn btn-large btn-success"
+%hr
+.padding-bottom
+
+
+- @courses.each do |course|
+  .row
+    = link_to course.name, admin_course_path(course)
+

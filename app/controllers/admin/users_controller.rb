@@ -1,19 +1,6 @@
 class Admin::UsersController < Admin::ApplicationController
   def index
-    case params[:by]
-      when 'normal'
-        @value = 2
-        @users = User.normal.paginate page: params[:page], per_page: MAX_IN_PAGE
-      when 'admin'
-        @value = 3
-        @users = User.admin.paginate page: params[:page], per_page: MAX_IN_PAGE
-      when 'disabled'
-        @value = 4
-        @users = User.disabled.paginate page: params[:page], per_page: MAX_IN_PAGE
-      else
-        @value = 1
-        @users = User.all.paginate page: params[:page], per_page: MAX_IN_PAGE
-    end
+     @users = User.all
   end
 
   def destroy
