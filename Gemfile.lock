@@ -283,7 +283,6 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
-    pg (0.18.4)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -400,7 +399,6 @@ DEPENDENCIES
   minitest-reporters (= 1.1.9)
   mysql2
   paperclip
-  pg (= 0.18.4)
   puma (= 3.4.0)
   rails (= 5.0.1)
   rails-controller-testing (= 0.1.1)
