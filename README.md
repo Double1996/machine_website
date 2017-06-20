@@ -4,26 +4,26 @@
 
 ## Power By
 - Ruby on Rails
-- Mysql
+- Mysql 5.7 && sqlite3
 - Bootstrap
 - HomeLand
 
 ## 主要功能
 
 ```
-1. 在线教学视频(优酷)
+1. 教学视频(优酷)
 2. 后台管理
 3. 在线考试
 4. 机械社区
 5. 个人微博
+6. 机械工程材料教学介绍
+
 ```
 
 ## 大感谢
 
-- [*厦门创意社科技公司*](http://www.tshe.com)
+- [*厦门美图秀秀科技有限公司*](http://www.tshe.com)
 - 太原工业学院机械工程系
-- 杨瑞（老板）
-- 任文慧（前女友，本网站第一个用户）
 
 ## Getting started
 
@@ -52,12 +52,6 @@ If the test suite passes, you'll be ready to run the app in a local server:
 
 ```
 $ rails server
-```
-
-On Cloud9, this command should be
-
-```
-$ rails server -b $IP -p $PORT
 ```
 
 instead.
