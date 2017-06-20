@@ -1,0 +1,34 @@
+<div class="home-page">
+  <h2><strong>在线判卷</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    考生姓名：<%= @respondent.student_name %>
+    |考生学号：<%= @respondent.student_id %></h2>
+  <ol>
+    <div style="color: #730E15"><h2><%= @respondent.exam.title %></h2></div>
+    <div class="row">
+      <% @time = 1 %>
+      <% @respondent.multi_responses.each do |multi_responses| %>
+          <p>
+          <h3> <%= @time %>.<%= Question.find(multi_responses.question_id).text %> </h3>
+          <% @time += 1 %>
+          <h4>考生回答: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= multi_responses.response_options.first.text %></h4>
+      <% end %>
+    </div>
+  </ol>
+  <div class="container">
+    <%= form_for (@respondent), url: admin_respondent_path(@respondent) do |f| %>
+        <%= f.label :考试成绩 %>
+        <%= f.text_field :results, class: 'form-control' %>
+        <div class="form-group">
+          <%= submit_tag "添加考生成绩", class: "btn btn-primary btn-lg btn-block" %>
+        </div>
+    <% end %>
+  </div>
+</div>
