@@ -22,7 +22,7 @@
 
 ## 大感谢
 
-- [*厦门美图秀秀科技有限公司*](http://www.tshe.com)
+- [*厦门创艺社*](http://www.tshe.com)
 - 太原工业学院机械工程系
 
 ## Getting started
