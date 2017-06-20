@@ -27,6 +27,7 @@ class RespondentsController < ApplicationController
         :exam_id,
         :student_id,
         :student_name,
+        :results,
         {
             :multi_responses_attributes => [
                 :question_id,

@@ -24,13 +24,11 @@
               <tr>
                 <td class="center"><%= respondent.student_name %></td>
                 <td class="center"><%= respondent.student_id %></td>
-                <td class="center"><%= respondent.created_at %></td>
+                <td class="center"><%= respondent.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
                 <td class="center">
-                  <%= link_to '编辑考试', edit_admin_respondent_path(respondent) %>
+                  <%= link_to '添加成绩', edit_admin_respondent_path(respondent) %>
                 </td>
-                <td class="center"><%= respondent.created_at %></td>
-                <td>
-                </td>
+                <td class="center"><%= respondent.results %></td>
               </tr>
           <% end %>
           </tbody>
