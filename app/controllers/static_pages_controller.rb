@@ -22,4 +22,24 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def paper1
+
+  end
+
+  def paper2
+
+  end
+
+  def paper3
+
+  end
+
+  def paper4
+
+  end
+
+  def paper5
+
+  end
 end
