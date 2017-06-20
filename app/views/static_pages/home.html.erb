@@ -7,12 +7,12 @@
       <ul class="slides">
         <li style="background-image:url(assets/img/slider.jpg)">
           <div class="text center">
-            <h1 class="heading center white margin-bottom-small flex-animation">今之机器之用大进 <br>人力可以胜天</h1>
+            <h1 class="heading center white margin-bottom-small flex-animation">机器创造一事<br>为今御侮之资，自强之本</h1>
             <p class="heading white center margin-bottom flex-animation">I learned the value of hard work by working
               hard</p>
             <div class="padding-onlytop-md flex-animation">
               <a href="" class="btn-alt small shadow margin-xs-bottom-small">Download Now</a>
-              <%= link_to 'Read More', about_path, class: 'btn-alt small shadow'%>
+              <%= link_to 'Read More', about_path, class: 'btn-alt small shadow' %>
             </div>
           </div>
           <div class="gradient dark"></div>
@@ -217,18 +217,20 @@
             </div>
             <div class="col-md-12 text" id="news">
               <!-- Single News -->
-              <% @topics.each do |topic| %>
-                  <div class="col-sm-4 single-news">
-                    <article>
-                      <img src="assets/img/news1.jpg" alt="">
-                      <div class="content">
-                        <h3><%= topic.title %></h3>
-                        <p><%= topic.body %></p>
-                        <span class="date"><%= topic.created_at %></span>
+              <% if @topics %>
+                  <% @topics.each do |topic| %>
+                      <div class="col-sm-4 single-news">
+                        <article>
+                          <img src="assets/img/news1.jpg" alt="">
+                          <div class="content">
+                            <h3><%= topic.title %></h3>
+                            <p><%= topic.body %></p>
+                            <span class="date"><%= topic.created_at %></span>
+                          </div>
+                          <%= link_to '', homeland_path, class: 'link' %>
+                        </article>
                       </div>
-                      <%= link_to '', homeland_path, class: 'link' %>
-                    </article>
-                  </div>
+                  <% end %>
               <% end %>
               <!-- END Single News -->
             </div>

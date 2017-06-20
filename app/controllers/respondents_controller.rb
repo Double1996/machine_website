@@ -12,8 +12,8 @@ class RespondentsController < ApplicationController
     @exam = Exam.includes(:questions => :response_options).find_by_id(params[:respondent][:exam_id])
     @respondent = Respondent.new(respondent_params)
     if @respondent.save
-      flash[:success] = ["谢谢你的答卷，祝你好运"]
-      redirect_to redirect_back_path
+      flash[:success] = "谢谢你的答卷，祝君好运！"
+      redirect_to exams_path
     else
       flash.now[:danger] = @respondent.errors.full_messages
     end

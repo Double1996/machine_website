@@ -33,6 +33,20 @@ class Admin::ExamsController < Admin::ApplicationController
     end
   end
 
+  def show
+    exam = Exam.find_by_id(params[:id])
+    if exam
+      @respondents = exam.respondents
+      unless @respondents
+        flash[:danger] = ["这次考试暂无答卷"]
+        redirect_to redirect_back_path
+      end
+    else
+      flash[:danger] = ["这次考试没有"]
+      redirect_to redirect_back_path
+    end
+  end
+
   private
   def exam_params
     params.require(:exam).permit(:title, :description)

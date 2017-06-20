@@ -16,31 +16,109 @@
         </div>
       </div>
     </div>
-    <!--  Team section  -->
+
     <div class="container">
       <div class="row no-margin padding-lg">
         <div class="col-md-12 padding-leftright-null">
           <div class="text text-center padding-topbottom-null">
-            <h3 class="big">视频列表</h3>
+            <h3 class="big">第三方在线视频</h3>
           </div>
         </div>
         <!--  Team  -->
         <div class="row team padding-onlytop-md">
-          <% @videos.each do |video| %>
-              <div class="col-xs-6 col-md-3 padding-leftright-null">
-                <div class="person">
-                  <img src="assets/img/youku.jpg" alt="" class="img-responsive">
-                  <h3>
-                    <%= video.name %></h3>
-                  <span><%= video.context %></span>
-                  <ul>
-                    <li style="margin-left: 40px"><%= link_to '在线播放',video_path(video) ,class: 'btn-alt small shadow' %></li>
-                  </ul>
-                </div>
-              </div>
-          <% end %>
+          <div class="col-xs-6 col-md-3 padding-leftright-null">
+            <div class="person">
+              <img src="assets/img/staff1.jpg" alt="" class="img-responsive">
+              <h3>Alexia Brown</h3>
+              <span>CEO</span>
+              <ul>
+                <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3 padding-leftright-null">
+            <div class="person">
+              <img src="assets/img/staff2.jpg" alt="" class="img-responsive">
+              <h3>Julio Sanchez</h3>
+              <span>CTO</span>
+              <ul>
+                <li><a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3 padding-leftright-null">
+            <div class="person">
+              <img src="assets/img/staff3.jpg" alt="" class="img-responsive">
+              <h3>Paul Tinox</h3>
+              <span>Web Developer</span>
+              <ul>
+                <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3 padding-leftright-null">
+            <div class="person">
+              <img src="assets/img/staff4.jpg" alt="" class="img-responsive">
+              <h3>Joe Doe</h3>
+              <span>Account</span>
+              <ul>
+                <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <!--  END Team section  -->
+
+  <div class="col-md-12 padding-leftright-null">
+    <div class="text text-center padding-topbottom-null">
+      <h3 class="big">网站爬虫视频</h3>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <% provide(:title, '在线视频播放') %>
+  <!-- /.panel-heading -->
+  <div class="panel-body">
+    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+      <thead>
+      <tr>
+        <th>视频</th>
+        <th>简介</th>
+        <th>发起时间</th>
+        <th>播放次数</th>
+        <th>播放</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @videos.each do |video| %>
+          <tr>
+            <th><%= video.name %></th>
+            <th><%= video.context %></th>
+            <th><%= video.created_at %></th>
+            <th>100</th>
+            <th><%= link_to '在线播放', video_path(video), class: 'btn-alt small shadow' %></th>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
+</div>
+<!--  Team section  -->

@@ -13,4 +13,8 @@ class Admin::ApplicationController < ApplicationController
     @user = current_user
   end
 
+  def redirect_back_path
+    request.referer || root_path
+  end
+
 end

@@ -10,7 +10,7 @@ class Admin::QuestionsController < Admin::ApplicationController
     @exam = exam_includes.find_by_id(params[:question][:exam_id])
     @question = Question.new(question_params)
     if @exam && @question.save
-      flash[:success] = [" #{@question.text} 已经创建好"]
+      flash[:success] =  "#{@question.text}已经创建好"
       redirect_to new_admin_response_option_path(:question_id => @question.id)
     else
       flash.now[:danger] = @question.errors.full_messages
@@ -28,7 +28,7 @@ class Admin::QuestionsController < Admin::ApplicationController
     @exam = Exam.includes(:questions).find_by_id(@question.exam_id)
     if @question && @question.update(question_params)
       if @question.response_options.any?
-        flash[:success] = ["Options for question ID: #{@question.id} has been updated."]
+        flash[:success] = "问题已经创建成功了！"
       else
         flash[:danger] = '没有选项'
       end

@@ -7,11 +7,12 @@
   <div class="form-exam">
     <div class="login-wrap">
       <%= form_for(@respondent) do |f| %>
+          <%= f.hidden_field :exam_id, value: @exam.id %>
           <%= render 'shared/error_messages', object: f.object %>
           <%= f.label :姓名 %>
           <%= f.text_field :student_name, class: 'form-control' %>
           <%= f.label :学号 %>
-          <%= f.email_field :student_id, class: 'form-control' %>
+          <%= f.text_field :student_id, class: 'form-control' %>
           </div>
           <ol>
             <!-- list all multi_questions for the exam -->
@@ -22,6 +23,7 @@
                       <h3><strong><%= @time %>.<%= multi_question.text.capitalize %></strong></h3>
                       <% @time += 1 %>
                       <%= f.fields_for :multi_responses do |multi_response| %>
+                          <%= multi_response.hidden_field :question_id, value: multi_question.id %>
                           <%= multi_response.collection_check_boxes :response_option_ids, multi_question.response_options, :id, :text, {}, class: "checkbox" %>
                       <% end %>
                     </div>

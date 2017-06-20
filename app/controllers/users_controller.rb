@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     redirect_to root_url and return unless @user.activated?
     if logged_in?
       @micropost = current_user.microposts.build
-      @microposts = @user.microposts.paginate(page: params[:page])
+      @microposts = Micropost.all.paginate(page: params[:page])
       @feed_items = current_user.feed.paginate(page: params[:page])
     end
   end

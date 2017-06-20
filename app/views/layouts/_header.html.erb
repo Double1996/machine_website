@@ -13,12 +13,13 @@
             <li><%= link_to "学科介绍", about_path %></li>
             <li class="divider"></li>
             <li>
-              <%= link_to "课件下载", root_path, method: "delete" %>
+              <%= link_to "课件下载",'http://localhost:3000' %>
+              <%= link_to "金相图谱", help_path %>
             </li>
           </ul>
         </li>
         <li><%= link_to "在线考试", exams_path %></li>
-        <li><%= link_to "机械新闻", 'http://www.loujuhong.cn/homeland/c/1' %></li>
+        <li><%= link_to "机械新闻", homeland_path %></li>
         <li><%= link_to "机械社区", homeland_path %></li>
         <li><%= link_to "联系我们", contact_path %></li>
       </ul>

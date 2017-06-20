@@ -1,15 +1,15 @@
 <h3><strong>添加选择题</strong></h3>
 <div class="text-center">
-  <h4><strong>1.Select Options</strong> | <span class="text-muted">2.Add Question Text</span></h4>
+  <h4><strong>1.选择选项个数</strong> | <span class="text-muted">2.添加问题说明</span></h4>
 </div>
 
 <%= form_for @question, url: admin_questions_path do |f| %>
     <%= f.hidden_field :exam_id, value: @exam.id %>
     <div class="form-group">
-      <h4><i class="fa fa-pencil-square-o" aria-hidden="true"></i> How many options for this question?</h4>
+      <h4><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 选择题有几个选项？</h4>
       <%= f.select :options, (1..6).map {|i| [i, i]}, {}, class: "form-control input-lg" %>
     </div>
     <div class="form-group">
-      <%= f.submit "Continue to the Next Stop", class: "btn btn-primary btn-lg btn-block" %>
+      <%= f.submit "继续下一步", class: "btn btn-primary btn-lg btn-block" %>
     </div>
 <% end %>

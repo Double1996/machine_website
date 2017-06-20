@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618122956) do
+ActiveRecord::Schema.define(version: 20170620032050) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "name",                                null: false
@@ -23,11 +23,6 @@ ActiveRecord::Schema.define(version: 20170618122956) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["status"], name: "index_courses_on_status"
-  end
-
-  create_table "documents", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "exams", force: :cascade do |t|
@@ -95,6 +90,7 @@ ActiveRecord::Schema.define(version: 20170618122956) do
     t.integer  "response_option_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "multi_response_id"
   end
 
   create_table "microposts", force: :cascade do |t|
@@ -106,27 +102,11 @@ ActiveRecord::Schema.define(version: 20170618122956) do
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end
 
-  create_table "movies", force: :cascade do |t|
-    t.string   "url"
-    t.string   "name"
-    t.string   "desc"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "multi_responses", force: :cascade do |t|
     t.integer  "respondent_id"
     t.integer  "question_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-  end
-
-  create_table "papers", force: :cascade do |t|
-    t.string   "title"
-    t.string   "type"
-    t.integer  "level"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "questions", force: :cascade do |t|
@@ -158,6 +138,7 @@ ActiveRecord::Schema.define(version: 20170618122956) do
     t.datetime "updated_at",   null: false
     t.integer  "student_id"
     t.string   "student_name"
+    t.integer  "results"
   end
 
   create_table "response_options", force: :cascade do |t|
@@ -165,14 +146,6 @@ ActiveRecord::Schema.define(version: 20170618122956) do
     t.text     "text"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "uploads", force: :cascade do |t|
-    t.string   "upload_file_name"
-    t.string   "upload_content_type"
-    t.integer  "upload_file_size"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
   end
 
   create_table "users", force: :cascade do |t|
