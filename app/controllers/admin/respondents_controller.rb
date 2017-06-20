@@ -1,5 +1,6 @@
 class Admin::RespondentsController < Admin::ApplicationController
 
+
   def edit
     @respondent = Respondent.find(params[:id])
   end

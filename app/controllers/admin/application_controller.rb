@@ -17,4 +17,10 @@ class Admin::ApplicationController < ApplicationController
     request.referer || root_path
   end
 
+  def export_csv(data, filename)
+    send_data "\xEF\xBB\xBF#{data}",
+              type: 'text/csv; charset=utf-8; header=present',
+              disposition: "attachment; filename=#{filename}"
+  end
+
 end
