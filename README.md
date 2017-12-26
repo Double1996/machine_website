@@ -1,6 +1,6 @@
 # MachineWebsite Application
 
-这是我个人毕业设计 为太原工业学院机械工程系建设的[*《机械工程材料》教学网站*](http://www.loujuhong.cn)。
+这是我个人毕业设计 为机械工程系建设的[*《机械工程材料》教学网站*](http://www.loujuhong.cn)。
 
 ## Power By
 - Ruby on Rails
