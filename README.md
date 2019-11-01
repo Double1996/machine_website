@@ -3,6 +3,7 @@
 这是我个人毕业设计 为机械工程系建设的[*《机械工程材料》教学网站*](http://www.loujuhong.cn)。
 
 ## Power By
+
 - Ruby on Rails
 - Mysql 5.7 && sqlite3
 - Bootstrap
@@ -17,7 +18,6 @@
 4. 机械社区
 5. 个人微博
 6. 机械工程材料教学介绍
-
 ```
 
 ## 大感谢

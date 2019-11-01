@@ -10,7 +10,7 @@ class Admin::QuestionsController < Admin::ApplicationController
     @exam = exam_includes.find_by_id(params[:question][:exam_id])
     @question = Question.new(question_params)
     if @exam && @question.save
-      flash[:success] =  "#{@question.text}已经创建好"
+      flash[:success] = "#{@question.text}已经创建好"
       redirect_to new_admin_response_option_path(:question_id => @question.id)
     else
       flash.now[:danger] = @question.errors.full_messages
@@ -55,6 +55,7 @@ class Admin::QuestionsController < Admin::ApplicationController
   end
 
   private
+
   def question_params
     params.require(:question).permit(:exam_id,
                                      :text,

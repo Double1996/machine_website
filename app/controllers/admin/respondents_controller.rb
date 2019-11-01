@@ -19,7 +19,9 @@ class Admin::RespondentsController < Admin::ApplicationController
     end
   end
 
+
   private
+
   def respondent_params
     params.require(:respondent).permit(
         :name,
